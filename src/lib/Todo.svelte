@@ -6,10 +6,9 @@
   export let id: string;
 
   const debounce = useDebounce(async () => {
-    const res = await fetch(`https://weak-dove-75.deno.dev/todo/${id}`, {
+    await fetch(`https://weak-dove-75.deno.dev/todo/${id}`, {
       method: "PATCH",
     });
-    console.log(res);
   }, 1000);
 
   const onCheckboxClick = () => {
